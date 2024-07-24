@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss-animated";
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #dc2626 transparent; /* For Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  background-color: transparent; /* Background of the scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #dc2626; /* Color of the scrollbar thumb */
+  border-radius: 3px; /* Rounded corners of the scrollbar thumb */
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/*End Animations*/
+/*
+-- Start BackGround Animation 
+*/
+.area {
+  background: #fff;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96%;
+  overflow: hidden;
+  filter: blur(2px);
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 105px;
+  height: 105px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 15s;
+  animation-duration: 10s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+.circles li:nth-child(11) {
+  left: 85%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+.circles li:nth-child(12) {
+  left: 85%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+.circles li:nth-child(13) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+.circles li:nth-child(14) {
+  left: 85%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+.circles li:nth-child(15) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+.circles li:nth-child(16) {
+  left: 85%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 0s;
+  animation-duration: 3s;
+}
+.circles li:nth-child(17) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 9s;
+}
+.circles li:nth-child(18) {
+  left: 85%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+.circles li:nth-child(19) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+.circles li:nth-child(20) {
+  left: 85%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+.h-screen {
+  height: 100vh; /* Ensures the div takes up the full height of the viewport */
+}
+
+.min-h-screen {
+  min-height: 100vh; /* Sets a minimum height to ensure it doesn't collapse */
+}
+
+.overflow-auto {
+  overflow: auto; /* Enables scrollbars when content overflows */
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
